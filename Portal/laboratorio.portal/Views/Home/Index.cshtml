@@ -1,0 +1,58 @@
+@using laboratorio_portal.Models
+
+<h2>Home</h2>
+
+
+
+@using (Html.BeginForm("SaveUser", "Home", FormMethod.Post))
+{
+
+    using (Html.DevExtreme().ValidationGroup())
+    {
+
+        @Html.AntiForgeryToken()
+
+        @(Html.DevExtreme().Form<UserHelper>()
+            .ShowValidationSummary(true)
+            .ScrollingEnabled(true)
+            .Items(items => {
+
+                items.AddGroup()
+                    .Caption("Register Employee")
+                    .AlignItemLabels(true)
+                    .Items(groupItems => {
+                        groupItems.AddSimpleFor(m => m.UserName).Editor(e => e.TextBox().Mode(TextBoxMode.Text)).IsRequired(true);
+                        groupItems.AddSimpleFor(m => m.LastName).Editor(e => e.TextBox().Mode(TextBoxMode.Text)).IsRequired(true);
+                    });
+
+                items.AddButton()
+                    .HorizontalAlignment(HorizontalAlignment.Center)
+                    .ButtonOptions(b => b.Text("Register")
+                        .Type(ButtonType.Success)
+                        .UseSubmitBehavior(true)
+                        .Icon("check")
+                );
+
+            })
+
+            .FormData(Model)
+        )
+    }
+
+}
+
+@(Html.DevExtreme().DataGrid<UserHelper>()
+    .ShowBorders(true)
+    .DataSource(d => d.Mvc().Controller("Home").LoadAction("List"))
+    .Columns(columns => {
+        columns.AddFor(m => m.UserName);
+        columns.AddFor(m => m.LastName);
+        columns.AddFor(m => m.DateRequest);
+    })
+    .Paging(p => p.PageSize(10))
+    .FilterRow(f => f.Visible(true))
+    .HeaderFilter(f => f.Visible(true))
+    .GroupPanel(p => p.Visible(true))
+    .Grouping(g => g.AutoExpandAll(false))
+    .RemoteOperations(true)
+)

@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32428.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Laboratorio", "Laboratorio.csproj", "{B9944F11-0DA1-42E7-BDA9-FCEB1093D561}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataAccess", "DataAccess", "{273C831B-73D9-40B4-8D7E-38AA0B01D0C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "laboratorio.data.access", "..\DataAccess\laboratorio.data.access\laboratorio.data.access.csproj", "{82E22C34-A0C5-422B-BC9F-1D0F44487AE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Portal", "Portal", "{3B7B0B7A-DBB0-44B3-8471-4925CA4A58E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "laboratorio.portal", "..\Portal\laboratorio.portal\laboratorio.portal.csproj", "{A127DA01-9CF6-4AF3-9932-452A3B325277}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A08FB07C-A1EC-4CA8-8C07-86DDADD4AE53}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9944F11-0DA1-42E7-BDA9-FCEB1093D561}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9944F11-0DA1-42E7-BDA9-FCEB1093D561}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9944F11-0DA1-42E7-BDA9-FCEB1093D561}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9944F11-0DA1-42E7-BDA9-FCEB1093D561}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82E22C34-A0C5-422B-BC9F-1D0F44487AE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82E22C34-A0C5-422B-BC9F-1D0F44487AE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82E22C34-A0C5-422B-BC9F-1D0F44487AE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82E22C34-A0C5-422B-BC9F-1D0F44487AE6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A127DA01-9CF6-4AF3-9932-452A3B325277}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A127DA01-9CF6-4AF3-9932-452A3B325277}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A127DA01-9CF6-4AF3-9932-452A3B325277}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A127DA01-9CF6-4AF3-9932-452A3B325277}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{82E22C34-A0C5-422B-BC9F-1D0F44487AE6} = {273C831B-73D9-40B4-8D7E-38AA0B01D0C3}
+		{A127DA01-9CF6-4AF3-9932-452A3B325277} = {3B7B0B7A-DBB0-44B3-8471-4925CA4A58E7}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB5D3279-1DF9-42BD-81B0-B3D526D54C06}
+	EndGlobalSection
+EndGlobal
