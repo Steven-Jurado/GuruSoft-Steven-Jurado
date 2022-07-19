@@ -1,5 +1,6 @@
 # GuruSoft-Steven-Jurado
 
+[Wiki](https://github.com/Steven-Jurado/GuruSoft-Steven-Jurado.wiki.git)
 
 ![Guru Soft](https://guru-soft.com/wp-content/uploads/2020/11/logo-gurusoft-header.png)
 
