@@ -1,14 +1,14 @@
-﻿using System;
+﻿using laboratorio.portal.Helper;
+using Newtonsoft.Json;
+using System;
 using System.Net;
 using System.Net.Http;
 using System.Net.Http.Json;
 using System.Threading.Tasks;
-using laboratorio.portal.Helper;
-using Newtonsoft.Json;
 
 namespace laboratorio.portal.Services
 {
-    
+
 
     public interface IComunicator
     {

@@ -2,9 +2,7 @@
 using laboratorio.data.access.Context;
 using Laboratorio.Helpers;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Laboratorio.Services
@@ -26,7 +24,11 @@ namespace Laboratorio.Services
         {
             _contextLaboratorio = contextLaboratorio;
         }
-
+        /// <summary>
+        /// Guardamos Usuario En Base De Datos
+        /// </summary>
+        /// <param name="user"></param>
+        /// <returns></returns>
         public async Task<MapperResponse> AddUserGuruSoftAsync(User user)
         {
             await _contextLaboratorio.User.AddAsync(user);
@@ -35,7 +37,10 @@ namespace Laboratorio.Services
             return new MapperResponse() { StatusCode = 200 };
 
         }
-
+        /// <summary>
+        /// Listamos Usuarios
+        /// </summary>
+        /// <returns></returns>
         public async Task<List<User>> ListUserGuruSoftAsync()
         {
             return await _contextLaboratorio.User.ToListAsync();

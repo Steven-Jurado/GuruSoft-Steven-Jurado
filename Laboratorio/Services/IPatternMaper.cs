@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Laboratorio.Services
+﻿namespace Laboratorio.Services
 {
     public interface IPatternMaper
     {
@@ -12,8 +7,17 @@ namespace Laboratorio.Services
 
     public class PatternOperation : IPatternMaper
     {
+
+        /// <summary>
+        /// Se  Calcular Patron Para Obtener la Mitad de Caracteres
+        /// </summary>
+        /// <param name="pattern"></param>
+        /// <returns></returns>
         public string FindPattern(string pattern)
         {
+
+            //Calcularos Valores Primos 
+
             string auxPattern = pattern;
             int LenghtPattern = pattern.Length;
 
@@ -23,20 +27,23 @@ namespace Laboratorio.Services
 
             if (calcularprimo != 0)
             {
-                return string.Empty;
+                var responseMitad = ((LenghtPattern + 1) / 2);
+
+                var startSplid = auxPattern.Substring(0, responseMitad);
+
+                return $"{startSplid[startSplid.Length - 1]}";
             }
             else
             {
-                /*var responseMitad = (LenghtPattern / 2) + 1*/;
-               // var auxResponseMita = responseMitad - 2;
-
                 var responseMitad = (LenghtPattern / 2);
 
-                var startSplid = auxPattern.Substring(0, responseMitad);
-                var endSplid = auxPattern.Substring(responseMitad-1, aux);
+                var startSplid = auxPattern.Substring(0, (responseMitad));
+                var endSplid = auxPattern.Substring(responseMitad, (LenghtPattern - responseMitad));
 
+                var start = startSplid[startSplid.Length - 1];
+                var end = endSplid[0];
 
-                return $"{endSplid}";
+                return $"{start}{end}";
 
             }
 

@@ -1,15 +1,13 @@
 ﻿using Laboratorio.Services;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Net.Mime;
 
 namespace Laboratorio.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Produces(MediaTypeNames.Application.Json)]
     public class PatternController : ControllerBase
     {
 
@@ -26,9 +24,9 @@ namespace Laboratorio.Controllers
             try
             {
 
-                var jaja = _patternMaper.FindPattern(pattern);
+                var responsePattern = _patternMaper.FindPattern(pattern);
 
-                return Ok();
+                return Ok(responsePattern);
             }
             catch (Exception)
             {

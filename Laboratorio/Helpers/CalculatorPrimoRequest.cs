@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Laboratorio.Helpers
+﻿namespace Laboratorio.Helpers
 {
     public class CalculatorPrimoRequest
     {
